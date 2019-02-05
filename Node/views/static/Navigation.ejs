@@ -1,14 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1107c3">
-    <a href="#"class="navbar-brand">SkillsIT</a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #03011e">
+    <a href="/" class="navbar-brand">
+        <img src="images/label.png" height="50" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">>
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto flex-row-reverse">
-            <li class="nav-item col-md-6">
-                <a href="#" class="nav-link col-md-6-text ">rrrrrr</a>
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Курсы</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1a0aee;">
+                    <a href="/courses" class="dropdown-item">HR</a>
+                    <a href="#" class="dropdown-item">BA</a>
+                    <a href="#" class="dropdown-item">English</a>
+                    <a href="#" class="dropdown-item">JavaScript</a>
+                    <a href="#" class="dropdown-item">Python</a>
+                    <a href="#" class="dropdown-item">C#</a>
+                    <a href="#" class="dropdown-item">Java</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">События</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">О нас</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Сотрудничество</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Как нас найти</a>
             </li>
         </ul>
     </div>
 </nav>
+
+<div id="app">
+
+</div>
+<script src="/javascripts/bundle.js"></script>

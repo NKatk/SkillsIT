@@ -1,9 +1,19 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const fs =require('fs');
+
+let content = fs.readFileSync(__dirname + '/data/home.json', 'utf-8');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home');
+    console.log(content);
+    res.render('home');
+});
+
+router.get('/api/getContent', function(req, res){
+    let con = JSON.parse(content);
+    //console.log(con);
+    res.send(con);
 });
 
 

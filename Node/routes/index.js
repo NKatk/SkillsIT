@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const fs =require('fs');
 
-let content = fs.readFileSync(__dirname + '/data/home.json', 'utf-8');
+let content = fs.readFileSync(__dirname + '/data/homePage/content.json', 'utf-8');
+let events = fs.readFileSync(__dirname + '/data/homePage/events.json', 'utf-8');
+let greeting = fs.readFileSync(__dirname + '/data/homePage/greeting.json', 'utf-8');
+//let partnership = fs.readFileSync(__dirname + '/data/homePage/partnership.json', 'utf-8');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,12 +13,24 @@ router.get('/', function(req, res, next) {
     res.render('home');
 });
 
-router.get('/api/getContent', function(req, res){
-    let con = JSON.parse(content);
-    //console.log(con);
-    res.send(con);
+router.get('/api/getThisContent', function(req, res){
+    res.send(content);
 });
 
+router.get('/api/getThisEvents', function (req, res) {
+    //console.log (events);
+    res.send(events);
+});
+
+router.get('/api/getThisGreeting', function (req, res) {
+    //console.log (events);
+    res.send(greeting);
+});
+
+router.get('/api/getThisPartnerShip', function (req, res) {
+    //console.log (partnership);
+    //res.send(partnership);
+});
 
 router.get('/courses', function(req,res,next){
   res.render('courses');
